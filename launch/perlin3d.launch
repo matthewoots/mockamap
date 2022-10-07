@@ -6,6 +6,8 @@
   <!--  box edge length, unit meter-->
   <param name="resolution" type="double" value="0.25"/>
 
+  <param name="circular" type="bool" value="true"/>
+
   <!-- map size unit meter-->
   <param name="x_length" type="int" value="50"/>
   <param name="y_length" type="int" value="50"/>

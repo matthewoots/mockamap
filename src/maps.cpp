@@ -123,6 +123,12 @@ Maps::perlin3D()
   {
     for (int j = 0; j < info.sizeY; ++j)
     {
+      if (info.isCircular)
+      {
+        if (pow(i-(info.sizeX/2),2) + pow(j-(info.sizeY/2),2) - pow(info.radius,2) > 0)
+          continue;
+      }
+
       for (int k = 0; k < info.sizeZ; ++k)
       {
         double tnoise = 0;
@@ -148,6 +154,12 @@ Maps::perlin3D()
   {
     for (int j = 0; j < info.sizeY; ++j)
     {
+      if (info.isCircular)
+      {
+        if (pow(i-(info.sizeX/2),2) + pow(j-(info.sizeY/2),2) - pow(info.radius,2) > 0)
+          continue;
+      }
+
       for (int k = 0; k < info.sizeZ; ++k)
       {
         double tnoise = 0;

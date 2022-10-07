@@ -78,9 +78,12 @@ main(int argc, char** argv)
   int sizeZ;
 
   double scale;
+  double radius;
   double update_freq;
 
   int type;
+
+  bool isCircular;
 
   nh_private.param("seed", seed, 4546);
   nh_private.param("update_freq", update_freq, 1.0);
@@ -88,6 +91,7 @@ main(int argc, char** argv)
   nh_private.param("x_length", sizeX, 100);
   nh_private.param("y_length", sizeY, 100);
   nh_private.param("z_length", sizeZ, 10);
+  nh_private.param("circular", isCircular, false);
 
   nh_private.param("type", type, 1);
 
@@ -105,6 +109,8 @@ main(int argc, char** argv)
   info.scale      = scale;
   info.output     = &output;
   info.cloud      = &cloud;
+  info.radius     = sizeX/1.85;
+  info.isCircular = isCircular;
 
   mocka::Maps map;
   map.setInfo(info);

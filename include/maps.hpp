@@ -16,6 +16,8 @@ public:
     int sizeX;
     int sizeY;
     int sizeZ;
+    int radius;
+    bool isCircular;
     int seed;
     double scale;
     sensor_msgs::PointCloud2 *output;
